@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/style.css">
+  <title>FEC Demo</title>
+</head>
+
+<body>
+  <div id="slider"></div>
+  <div id="reservations"></div>
+  <div id="grid"></div>
+  <script src="/lib/react.development.js"></script>
+  <script src="/lib/react-dom.development.js"></script>
+  <script src="http://localhost:3001/bundle.js"></script>
+  <script src="http://localhost:3002/bundle.js"></script>
+  <script src="http://localhost:3003/bundle.js"></script>
+  <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+  <script>
+    ReactDOM.render(
+      React.createElement(Slider),
+      document.getElementById('slider')
+    );
+    ReactDOM.render(
+      React.createElement(Reservations),
+      document.getElementById('reservations')
+    );
+    ReactDOM.render(
+      React.createElement(Grid),
+      document.getElementById('grid')
+    );
+  </script>
+</body>
+
+</html>
